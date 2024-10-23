@@ -26,8 +26,16 @@ while (chute != numeroSecreto) {
     }
 }
 
+//substituir o if else
+//Operador Ternário
+
+let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
+alert(`Parabéns, você acertou o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}`);
+
+/*
 if (tentativas > 1) {
     alert(`Parabéns, você acertou o número secreto ${numeroSecreto} com ${tentativas} tentativas`); // `${ }` é uma das formas para concatenar variáveis - crase (template string)
 } else {
     alert(`Parabéns, você acertou o número secreto ${numeroSecreto} com ${tentativas} tentativa`);
 }
+*/
