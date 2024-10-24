@@ -103,4 +103,58 @@ while (numero >= 0){
     numero--;
 }
 
+DESAFIO FINAL
 */
+
+alert("Bem vinde!!");
+console.log("Bem vinde ao site!!");
+
+let nome = prompt("Qual o seu nome");
+
+alert(`Olá, ${nome}!!`);
+
+let linguagem = prompt("Qual a sua linguagem de programação favorita?");
+console.log(`A linguagem de programação favorita de ${nome} é ${linguagem}`);
+
+let valor1 = prompt("Digite um número");
+let valor2 = prompt("Digite outro número");
+let resulSoma = valor1 + valor2;
+let resultSubtracao = valor1 - valor2;
+console.log(`A soma entre ${valor1} e ${valor2} é: ${resulSoma}`);
+console.log(`A diferença ente ${valor1} e ${valor2} é: ${resultSubtracao}`);
+
+let idade = prompt("Qual a sua idade?");
+if (idade >= 18) {
+    console.log("Você É maior de idade");
+} else {
+    console.log("Você NÃO É maior de idade");
+}
+
+let numero = prompt("Digite um número");
+if (numero > 0){
+    console.log("O número é positivo");
+} else if (numero < 0){
+    console.log("O número é negativo");
+} else {
+    console.log("O número é 0");
+}
+
+let contagem = 1;
+while (contagem <= 10){
+    console.log(`O contador está em: ${contagem}`);
+    contagem++;
+}
+
+let nota = prompt("Digite a sua nota");
+if (nota >= 7){
+    console.log("Aprovado");
+} else {
+    console.log("Reprovado");
+}
+
+let num1 = Math.random();
+console.log(num1);
+let num2 = (Math.random() * 10) + 1;
+console.log(num2);
+let num3 = (Math.random() * 1000) + 1;
+console.log(num3);
