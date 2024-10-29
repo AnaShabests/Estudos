@@ -1,3 +1,17 @@
 body {
     background-color: black; /*cor de fundo*/
+    color: #F6F6F6; /*cor do texto*/
+    font-family: Arial, sans-serif; /*tipo de fonte*/
+    margin: 1; /*margem*/
+    padding: 1; /*preenchimento*/
+}
+strong {
+    color: #22D4FD; /*cor do texto*/
+}
+span {
+    color: #22D4FD; /*cor do texto*/
+}
+button {
+    background-color: green; /*cor de fundo*/
+    color: white; /*cor do texto*/
 }
