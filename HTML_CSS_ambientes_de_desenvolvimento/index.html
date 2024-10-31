@@ -25,6 +25,12 @@
 
 HTML - Linguagem de Marcação
 CSS - Linguagem de Estilo / Estilização
+
+
+font-weight: bold; (Texto em negrito)
+color: #22D4FD; (Cor do texto azul)
+border: 1px solid #22D4FD; (Borda com 1 px de largura, do tipo sólida e cor da borda azul)
+padding: 10px; (Espaçamento interno de 10px)
 -->
 
 <!DOCTYPE html>
@@ -37,15 +43,21 @@ CSS - Linguagem de Estilo / Estilização
     </head>
     <body>
         <header></header> <!-- Cabeçalho -->
-        <main> <!-- Conteúdo principal -->
-            <h1>
-                Eleve seu negócio digital a outro nível <strong>com um Front-end de qualidade!</strong>
-            </h1>
-            <p>
-                Olá! Sou Ana Luiza, desenvolvedora Front-end com especialidade em <span> React, HTML e CSS</span>. Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?
-            </p>
-            <a href="https://instagram.com/shabests_">Instagram</a> <!-- Link/Âncoras -->
-            <a href="https://github.com/AnaShabests">GitHub</a> <!-- Link -->
+        <main class="apresentacao"> <!-- Conteúdo principal -->
+            <section class="apresentacao__conteudo">
+                <h1 class="apresentacao__conteudo__titulo">
+                    Eleve seu negócio digital a outro nível <strong class="titulo-destaque">com um Front-end de qualidade!</strong>
+                </h1>
+
+                <p class="apresentacao__conteudo__texto">
+                    Olá! Sou Ana Luiza, desenvolvedora Front-end estudando <span> React, HTML e CSS</span>. Dando sempre o meu melhor e me esforçando sempre pela minha evolução. <!-- span n deixa em negrito igual o strong -->
+                </p>
+
+                <div class="apresentacao__links">
+                    <a class="apresentacao__links__link" href="https://instagram.com/shabests_">Instagram</a> <!-- Link/Âncoras -->
+                    <a class="apresentacao__links__link" href="https://github.com/AnaShabests">GitHub</a>
+                </div>
+            </section>
             <img src="img/imagem.png" alt="Imagem de uma pessoa programando">
         </main> 
         <footer></footer> <!-- Rodapé -->
