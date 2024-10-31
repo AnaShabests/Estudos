@@ -1,17 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+
+* { /* Seleciona todos os elementos da págona */
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    height: 100vh; /* 100% da altura da tela */
+    box-sizing: border-box; /* inclui padding e border no tamanho total */
     background-color: black; /*cor de fundo*/
     color: #F6F6F6; /*cor do texto*/
     font-family: Arial, sans-serif; /*tipo de fonte*/
-    margin: 1; /*margem*/
-    padding: 1; /*preenchimento*/
 }
-strong {
+
+.titulo-destaque {
     color: #22D4FD; /*cor do texto*/
 }
 span {
     color: #22D4FD; /*cor do texto*/
 }
-button {
-    background-color: green; /*cor de fundo*/
-    color: white; /*cor do texto*/
+
+.apresentacao {
+    margin: 10%;
+
+    display: flex; /*Por padrão, tudo fica na direção de linha*/
+    justify-content: space-between; /*Espaço entre os itens*/
+
+    align-items: center; /*Centraliza o conteúdo na vertical (alinhamento entre os itens)*/
+    /*flex-wrap: wrap; Quebra a linha quando não cabe mais*/
+}
+
+.apresentacao__conteudo {
+    width: 615px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 36px;
+    font-family: "Krona One", sans-serif;
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 24;
+    font-family: "Montserrat", sans-serif;
+}
+
+.apresentacao__links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.apresentacao__links__link {
+    background-color: #22D4FD;
+    width: 280px;
+    text-align: center; /*Alinha o texto*/
+    border-radius: 16px; /*Borda arredondada*/
+    font-size: 24px;
+    padding: 21.5px 0; /*1º valor: vertical 2º valor: horizontal - Espaçamento interno*/
+    text-decoration: none; /*Remove o sublinhado do link*/
+    color: black;
 }
