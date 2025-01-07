@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
 * { /* Seleciona todos os elementos da págona */
     margin: 0;
@@ -21,7 +21,7 @@ span {
 }
 
 .apresentacao {
-    margin: 10%;
+    margin: 10% 15%;
 
     display: flex; /*Por padrão, tudo fica na direção de linha*/
     justify-content: space-between; /*Espaço entre os itens*/
@@ -46,7 +46,13 @@ span {
 
 .apresentacao__links {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
+}
+
+.apresentacao__links a {
+    padding: 10px 20px; /*Espaçamento entre o texto e os botões*/
+    font-size: 20px;
+    margin: 10px;
 }
 
 .apresentacao__links__link {
@@ -58,4 +64,6 @@ span {
     padding: 21.5px 0; /*1º valor: vertical 2º valor: horizontal - Espaçamento interno*/
     text-decoration: none; /*Remove o sublinhado do link*/
     color: black;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
 }

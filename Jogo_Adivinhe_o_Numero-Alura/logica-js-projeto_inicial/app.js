@@ -31,8 +31,8 @@ while (chute != numeroSecreto) {
 }
 
 //substituir o if else
-//Operador Ternário
 
+//Operador Ternário
 let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa"; //tentativas é maior que 1? Se sim, imprimirá "tentativas", se não, imprimirá "tentativa"
 alert(`Parabéns, você acertou o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}`);
 
