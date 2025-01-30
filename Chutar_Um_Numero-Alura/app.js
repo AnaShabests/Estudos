@@ -14,6 +14,12 @@ function exibirTexto(tag, texto){
     campo.innerHTML = texto;
 }
 
+function gerarNumeroAleatorio(){
+    return parseInt(Math.random() * 10) + 1; //retorna na variável numeroSecreto
+}
+
+let tentativas = 1;
+
 exibirTexto('h1', 'Jogo do Número Secreto');
 exibirTexto('p', 'Tente adivinhar o número secreto entre 1 a 10.');
 
@@ -24,7 +30,9 @@ function verificarChute(){
 
     if (chute == numeroSecreto){
         exibirTexto('h1', 'Parabéns!');
-        exibirTexto('p', 'Você descobiu o número secreto!');
+        let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativas'; //tentativas é maior que 1? se sim, a variável será tentativas, se não, a variável será tentativa
+        let msgTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}`;
+        exibirTexto('p', msgTentativas);
     } else {
         if (chute > numeroSecreto){
             exibirTexto('h1', 'Que pena! Tente novamente.');
@@ -33,9 +41,6 @@ function verificarChute(){
             exibirTexto('h1', 'Que pena! Tente novamente.');
             exibirTexto('p', 'O número secreto é maior.');
         }
+        tentativas++;
     }
-}
-
-function gerarNumeroAleatorio(){
-    return parseInt(Math.random() * 10) + 1; //retorna na variável numeroSecreto
 }
