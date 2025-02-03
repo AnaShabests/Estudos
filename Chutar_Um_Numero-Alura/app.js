@@ -1,5 +1,3 @@
-let numeroSecreto = gerarNumeroAleatorio();
-
 //let tituloPagina = document.querySelector('h1');
 //tituloPagina.innerHTML = 'Jogo do Número Secreto';
 
@@ -15,7 +13,20 @@ function exibirTexto(tag, texto){
 }
 
 function gerarNumeroAleatorio(){
-    return parseInt(Math.random() * 10) + 1; //retorna na variável numeroSecreto
+    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1); //retorna na variável numeroSecreto
+    let qntdElementosLista = listaNumeroSorteado.length;
+
+    if (qntdElementosLista == numeroLimite){
+        listaNumeroSorteado = [];
+    }
+
+    if (listaNumeroSorteado.includes(numeroEscolhido)){
+        return gerarNumeroAleatorio();
+    } else{
+        listaNumeroSorteado.push(numeroEscolhido); //Adicionando o numeroEscolhido na lista
+        console.log(listaNumeroSorteado);
+        return numeroEscolhido;
+    }
 }
 
 function limparCampo(){
@@ -35,15 +46,20 @@ function reiniciarJogo(){
 
     //Mudar o texto assim que clicar no Novo Jogo
     textoInicial();
+
+    //Habilita e desabilita o botão, para jogar até o final
     document.getElementById('reiniciar').setAttribute('disabled', false);
 }
 
+let listaNumeroSorteado = [];
+let numeroLimite = 10;
+let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
 textoInicial();
 
 function verificarChute(){
-    console.log('O botão foi clicado');
+    //console.log('O botão foi clicado');
     let chute = parseInt(document.querySelector('input').value);
     console.log(chute == numeroSecreto);
 
@@ -53,6 +69,7 @@ function verificarChute(){
         let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa'; //tentativas é maior que 1? se sim, a variável será tentativas, se não, a variável será tentativa
         let msgTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}`;
 
+        console.log(numeroSecreto)
         exibirTexto('p', msgTentativas);
 
         //Ativar o botão Novo Jogo
