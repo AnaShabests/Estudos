@@ -10,6 +10,7 @@
 function exibirTexto(tag, texto){
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
+    responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate:1.3});
 }
 
 function gerarNumeroAleatorio(){
@@ -61,15 +62,15 @@ textoInicial();
 function verificarChute(){
     //console.log('O botão foi clicado');
     let chute = parseInt(document.querySelector('input').value);
-    console.log(chute == numeroSecreto);
+    //console.log(chute == numeroSecreto);
 
     if (chute == numeroSecreto){
-        exibirTexto('h1', 'Parabéns!');
+        exibirTexto('h1', 'Parabéns! Você Acertou');
 
         let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa'; //tentativas é maior que 1? se sim, a variável será tentativas, se não, a variável será tentativa
         let msgTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}`;
 
-        console.log(numeroSecreto)
+        //console.log(numeroSecreto)
         exibirTexto('p', msgTentativas);
 
         //Ativar o botão Novo Jogo
