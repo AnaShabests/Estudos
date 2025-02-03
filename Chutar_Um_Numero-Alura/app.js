@@ -18,6 +18,11 @@ function gerarNumeroAleatorio(){
     return parseInt(Math.random() * 10) + 1; //retorna na variável numeroSecreto
 }
 
+function limparCampo(){
+    chute = document.querySelector('input');
+    chute.value = '';
+}
+
 let tentativas = 1;
 
 exibirTexto('h1', 'Jogo do Número Secreto');
@@ -30,17 +35,19 @@ function verificarChute(){
 
     if (chute == numeroSecreto){
         exibirTexto('h1', 'Parabéns!');
-        let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativas'; //tentativas é maior que 1? se sim, a variável será tentativas, se não, a variável será tentativa
+        let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa'; //tentativas é maior que 1? se sim, a variável será tentativas, se não, a variável será tentativa
         let msgTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}`;
         exibirTexto('p', msgTentativas);
     } else {
-        if (chute > numeroSecreto){
+        if (chute >= numeroSecreto){
             exibirTexto('h1', 'Que pena! Tente novamente.');
             exibirTexto('p', 'O número secreto é menor.');
         } else if (chute < numeroSecreto){
             exibirTexto('h1', 'Que pena! Tente novamente.');
             exibirTexto('p', 'O número secreto é maior.');
         }
+
         tentativas++;
+        limparCampo();
     }
 }
